@@ -1,0 +1,1551 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delight Coffee Cafe</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93")
+          center/cover no-repeat fixed;
+        color: #fff;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(6px);
+      }
+
+      h2 {
+        margin-top: 25px;
+        font-size: 26px;
+        cursor: pointer;
+        padding: 8px 0;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: none;
+      }
+
+      li {
+        background: rgba(255, 255, 255, 0.1);
+        margin: 8px 0;
+        padding: 12px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .rating-box {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .stars span {
+        cursor: pointer;
+        font-size: 35px;
+        margin: 5px;
+      }
+
+      /* Instagram button */
+      .insta-btn {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .insta-link {
+        display: inline-block;
+        padding: 10px 22px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 30px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .insta-link:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        font-size: 20px;
+        font-weight: 600;
+        background: rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>✨ Delight Coffee Cafe ✨</header>
+
+    <div class="container">
+      <!-- Coffee -->
+<!-- <h2 onclick="toggleMenu('coffee')">☕ Coffee <span>+</span></h2>
+      <ul id="coffee">
+        <li>Classic Cold Coffee <span>₹70</span></li>
+        <li>DCC Special Cold Coffee <span>₹179</span></li>
+        <li>Hot Coffee <span>₹45</span></li>
+        <li>Hot Coffee With Chocolate <span>₹60</span></li>
+        <li>Cold Coffee With Ice Cream <span>₹89</span></li>
+      </ul>
+
+      <!-- Pizza -->
+<!-- <h2 onclick="toggleMenu('pizza')">🍕 Pizza <span>+</span></h2>
+      <ul id="pizza">
+        <li>Paneer Pizza <span>₹219</span></li>
+        <li>OTC Pizza <span>₹199</span></li>
+        <li>Corn Pizza <span>₹179</span></li>
+        <li>Margherita Pizza <span>₹179</span></li>
+        <li>Onion Pizza <span>₹179</span></li>
+        <li>Capsicum Pizza <span>₹179</span></li>
+        <li>Garden Fresh Pizza <span>₹239</span></li>
+        <li>DCC Special Pizza <span>₹279</span></li>
+      </ul> -->
+
+<!-- Brownie -->
+<!-- <h2 onclick="toggleMenu('brownie')">🍫 Brownie <span>+</span></h2>
+      <ul id="brownie">
+        <li>Choco Lava Cake <span>₹99</span></li>
+        <li>Brownie With Ice Cream <span>₹149</span></li>
+        <li>Classic Brownie <span>₹99</span></li>
+      </ul> -->
+
+<!-- Fries -->
+<!-- <h2 onclick="toggleMenu('fries')">🍟 Fries <span>+</span></h2>
+      <ul id="fries">
+        <li>Peri Peri Fries <span>₹119</span></li>
+        <li>French Fries <span>₹99</span></li>
+      </ul> -->
+
+<!-- Roll -->
+<!-- <h2 onclick="toggleMenu('roll')">🌯 Roll <span>+</span></h2>
+      <ul id="roll">
+        <li>Spring Roll (6 pcs) <span>₹149</span></li>
+        <li>Cheese Roll (6 pcs) <span>₹169</span></li>
+      </ul> -->
+
+<!-- Pasta -->
+<!-- <h2 onclick="toggleMenu('pasta')">🍝 Pasta <span>+</span></h2>
+      <ul id="pasta">
+        <li>White Sauce Pasta <span>₹199</span></li>
+        <li>Red Sauce Pasta <span>₹169</span></li>
+        <li>Pink Sauce Pasta <span>₹229</span></li>
+      </ul> -->
+
+<!-- Vada Pav -->
+<!-- <h2 onclick="toggleMenu('vada')">🍔 Vada Pav <span>+</span></h2>
+      <ul id="vada">
+        <li>Vada Pav <span>₹59</span></li>
+        <li>DCC Special Vada Pav <span>₹99</span></li>
+      </ul> -->
+
+<!-- Crunchies -->
+<!-- <h2 onclick="toggleMenu('crunch')">🧀 Crunchies <span>+</span></h2>
+      <ul id="crunch">
+        <li>Potato Nuggets (8 pcs) <span>₹129</span></li>
+        <li>Cheese Corn Toast <span>₹149</span></li>
+      </ul> -->
+
+<!-- Chinese -->
+<!-- <h2 onclick="toggleMenu('chinese')">🍜 Chinese <span>+</span></h2>
+      <ul id="chinese">
+        <li>Hakka Noodles <span>₹139</span></li>
+        <li>Veg Chowmein <span>₹129</span></li>
+        <li>Chilli Garlic Noodles <span>₹149</span></li>
+        <li>Schezwan Noodles <span>₹159</span></li>
+        <li>Deep Fry (6 pcs) <span>₹119</span></li>
+      </ul> -->
+
+<!-- Pav Bhaji -->
+<!-- <h2 onclick="toggleMenu('bhaji')">🍛 Pav Bhaji <span>+</span></h2>
+      <ul id="bhaji">
+        <li>Pav Bhaji <span>₹149</span></li>
+      </ul> -->
+
+<!-- Sandwich -->
+<!-- <h2 onclick="toggleMenu('sandwich')">🥪 Sandwich <span>+</span></h2>
+      <ul id="sandwich">
+        <li>Veg Sandwich Grilled <span>₹119</span></li>
+        <li>Bombay Sandwich <span>₹99</span></li>
+        <li>Paneer Sandwich Grilled <span>₹159</span></li>
+        <li>DCC Special Sandwich Grilled <span>₹179</span></li>
+      </ul> -->
+
+<!-- Burger -->
+<!-- <h2 onclick="toggleMenu('burger')">🍔 Burger <span>+</span></h2>
+      <ul id="burger">
+        <li>Cheese Burger <span>₹149</span></li>
+        <li>Aloo Tikki Burger <span>₹99</span></li>
+        <li>Veg Tikki Burger <span>₹109</span></li>
+        <li>Aloo Tikki Burger (Double) <span>₹129</span></li>
+        <li>DCC Special Burger <span>₹169</span></li>
+      </ul> -->
+
+<!-- Garlic Bread -->
+<!-- <h2 onclick="toggleMenu('garlic')">🧄 Garlic Bread <span>+</span></h2>
+      <ul id="garlic">
+        <li>Stuffed Garlic Bread <span>₹199</span></li>
+        <li>OTC Garlic Bread <span>₹199</span></li>
+      </ul> -->
+
+<!-- Maggi -->
+<!-- <h2 onclick="toggleMenu('maggi')">🍜 Maggi <span>+</span></h2>
+      <ul id="maggi">
+        <li>Veg Maggi <span>₹99</span></li>
+        <li>Plain Maggi <span>₹79</span></li>
+        <li>Cheese Maggi <span>₹129</span></li>
+        <li>Peri Peri Maggi <span>₹139</span></li>
+        <li>Paneer Veg Maggi <span>₹149</span></li>
+      </ul> -->
+
+<!-- Tea -->
+<!-- <h2 onclick="toggleMenu('tea')">🍵 Tea <span>+</span></h2>
+      <ul id="tea">
+        <li>Masala Tea <span>₹29</span></li>
+        <li>Ginger Tea <span>₹29</span></li>
+        <li>DCC Special Tea <span>₹39</span></li>
+      </ul> -->
+
+<!-- Iced Tea -->
+<!-- <h2 onclick="toggleMenu('iced')">🧊 Iced Tea <span>+</span></h2>
+      <ul id="iced">
+        <li>Lemon Iced Tea <span>₹99</span></li>
+        <li>Strawberry Iced Tea <span>₹99</span></li>
+        <li>Watermelon Iced Tea <span>₹99</span></li>
+      </ul> -->
+
+<!-- Rating Section -->
+<!-- <div class="rating-box">
+        <h2>⭐ Rate Your Experience</h2>
+        <div class="stars">
+          <span onclick="rate(1)">★</span>
+          <span onclick="rate(2)">★</span>
+          <span onclick="rate(3)">★</span>
+          <span onclick="rate(4)">★</span>
+          <span onclick="rate(5)">★</span>
+        </div>
+        <p id="rate-msg" style="font-size: 20px; margin-top: 10px"></p>
+      </div> -->
+
+<!-- Instagram Button -->
+<!-- <div class="insta-btn">
+        <a
+          class="insta-link"
+          href="https://instagram.com/delightcoffeecafe"
+          target="_blank"
+        >
+          📸 Follow Us on Instagram — @delightcoffeecafe
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      😊 Thank You For Visiting — Come Again! Your Smile Makes Our Café Special ❤️
+    </footer>
+
+    <script>
+      function toggleMenu(id) {
+        const menu = document.getElementById(id);
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      function rate(stars) {
+        const msg = document.getElementById("rate-msg");
+
+        if (stars == 5) msg.innerHTML = "😍 Thank you! You made our day!";
+        else if (stars == 4) msg.innerHTML = "😊 Glad you liked it!";
+        else if (stars == 3) msg.innerHTML = "🙂 We will improve more!";
+        else if (stars == 2) msg.innerHTML = "😕 Sorry! We'll do better!";
+        else msg.innerHTML = "😭 Sorry to disappoint you!";
+
+        msg.style.color = "yellow";
+      }
+    </script>
+  </body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delight Coffee Cafe</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+        background-attachment: fixed;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        text-align: center;
+        padding: 50px 20px;
+        font-size: 45px;
+        font-family: "Pacifico", cursive;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+      }
+
+      .container {
+        max-width: 900px;
+        width: 90%;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 25px;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+      }
+
+      h2 {
+        margin-top: 25px;
+        font-size: 28px;
+        font-family: "Pacifico", cursive;
+        cursor: pointer;
+        padding: 10px 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+      }
+      h2:hover {
+        color: #ff9cee;
+      }
+      h2 span {
+        transition: 0.3s;
+      }
+      h2:hover span {
+        transform: rotate(90deg);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+      ul.show {
+        max-height: 1000px;
+      }
+
+      li {
+        background: rgba(255, 255, 255, 0.15);
+        margin: 10px 0;
+        padding: 15px 20px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      li:hover {
+        transform: scale(1.03);
+      }
+
+      /* Rating */
+      .rating-box {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .stars span {
+        cursor: pointer;
+        font-size: 35px;
+        margin: 5px;
+      }
+
+      /* Insta Button */
+      .insta-btn {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .insta-link {
+        padding: 12px 25px;
+        background: linear-gradient(45deg, #ff9cee, #a6c1ee);
+        border-radius: 30px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        font-size: 20px;
+        color: #fff;
+        margin-top: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>✨ Delight Coffee Cafe ✨</header>
+
+    <div class="container">
+      Coffee -->
+<!-- <h2 onclick="toggleMenu('coffee')">☕ Coffee <span>+</span></h2>
+      <ul id="coffee">
+        <li>Classic Cold Coffee <span>₹70</span></li>
+        <li>DCC Special Cold Coffee <span>₹179</span></li>
+        <li>Hot Coffee <span>₹45</span></li>
+        <li>Hot Coffee With Chocolate <span>₹60</span></li>
+        <li>Cold Coffee With Ice Cream <span>₹89</span></li>
+      </ul>
+
+       Milkshake -->
+<!-- <h2 onclick="toggleMenu('shake')">🥤 Milkshakes <span>+</span></h2>
+      <ul id="shake">
+        <li>Chocolate Shake <span>₹149</span></li>
+        <li>Oreo Shake <span>₹159</span></li>
+        <li>Strawberry Shake <span>₹139</span></li>
+        <li>Butterscotch Shake <span>₹149</span></li>
+        <li>KitKat Shake <span>₹169</span></li>
+      </ul>
+
+       Pizza -->
+<!-- <h2 onclick="toggleMenu('pizza')">🍕 Pizza <span>+</span></h2>
+      <ul id="pizza">
+        <li>Paneer Pizza <span>₹219</span></li>
+        <li>OTC Pizza <span>₹199</span></li>
+        <li>Corn Pizza <span>₹179</span></li>
+        <li>Margherita Pizza <span>₹179</span></li>
+        <li>Onion Pizza <span>₹179</span></li>
+      </ul> -->
+
+<!-- Garlic Bread -->
+<!-- <h2 onclick="toggleMenu('garlic')">🧄 Garlic Bread <span>+</span></h2>
+      <ul id="garlic">
+        <li>Classic Garlic Bread <span>₹129</span></li>
+        <li>Cheese Garlic Bread <span>₹159</span></li>
+        <li>Paneer Garlic Bread <span>₹179</span></li>
+      </ul> -->
+
+<!-- Burger -->
+<!-- <h2 onclick="toggleMenu('burger')">🍔 Burger <span>+</span></h2>
+      <ul id="burger">
+        <li>Aloo Tikki Burger <span>₹79</span></li>
+        <li>Cheese Burger <span>₹99</span></li>
+        <li>Paneer Burger <span>₹129</span></li>
+      </ul>
+
+       Fries -->
+<!-- <h2 onclick="toggleMenu('fries')">🍟 Fries <span>+</span></h2>
+      <ul id="fries">
+        <li>Classic Fries <span>₹79</span></li>
+        <li>Peri Peri Fries <span>₹99</span></li>
+        <li>Cheese Loaded Fries <span>₹129</span></li>
+      </ul> -->
+
+<!-- Pasta -->
+<!-- <h2 onclick="toggleMenu('pasta')">🍝 Pasta <span>+</span></h2>
+      <ul id="pasta">
+        <li>White Sauce Pasta <span>₹149</span></li>
+        <li>Red Sauce Pasta <span>₹149</span></li>
+        <li>Mix Sauce Pasta <span>₹159</span></li>
+        <li>Cheese Pasta <span>₹169</span></li>
+      </ul> -->
+
+<!-- Maggie -->
+<!-- <h2 onclick="toggleMenu('maggie')">🍜 Maggie <span>+</span></h2>
+      <ul id="maggie">
+        <li>Classic Maggie <span>₹49</span></li>
+        <li>Veg Maggie <span>₹69</span></li>
+        <li>Masala Maggie <span>₹59</span></li>
+        <li>Cheese Maggie <span>₹89</span></li>
+      </ul> -->
+
+<!-- Sandwich -->
+<!-- <h2 onclick="toggleMenu('sandwich')">🥪 Sandwich <span>+</span></h2>
+      <ul id="sandwich">
+        <li>Veg Sandwich <span>₹79</span></li>
+        <li>Cheese Sandwich <span>₹99</span></li>
+        <li>Grilled Sandwich <span>₹129</span></li>
+        <li>Paneer Sandwich <span>₹149</span></li>
+      </ul> -->
+
+<!-- Waffles -->
+<!-- <h2 onclick="toggleMenu('waffle')">🧇 Waffles <span>+</span></h2>
+      <ul id="waffle">
+        <li>Chocolate Waffle <span>₹149</span></li>
+        <li>Nutella Waffle <span>₹179</span></li>
+        <li>Strawberry Waffle <span>₹149</span></li>
+      </ul> -->
+
+<!-- Brownie -->
+<!-- <h2 onclick="toggleMenu('brownie')">🍫 Brownie <span>+</span></h2>
+      <ul id="brownie">
+        <li>Choco Lava Cake <span>₹99</span></li>
+        <li>Brownie With Ice Cream <span>₹149</span></li>
+      </ul> -->
+
+<!-- Mocktails -->
+<!-- <h2 onclick="toggleMenu('mocktail')">🍹 Mocktails <span>+</span></h2>
+      <ul id="mocktail">
+        <li>Blue Lagoon <span>₹119</span></li>
+        <li>Green Apple Mojito <span>₹129</span></li>
+        <li>Virgin Mojito <span>₹109</span></li>
+        <li>Strawberry Mojito <span>₹129</span></li>
+      </ul> -->
+
+<!-- Rating
+      <div class="rating-box">
+        <h2>⭐ Rate Your Experience</h2>
+        <div class="stars">
+          <span onclick="rate(1)">★</span>
+          <span onclick="rate(2)">★</span>
+          <span onclick="rate(3)">★</span>
+          <span onclick="rate(4)">★</span>
+          <span onclick="rate(5)">★</span>
+        </div>
+        <p id="rate-msg" style="font-size: 20px; margin-top: 10px"></p>
+      </div> -->
+
+<!-- Instagram -->
+<!-- <div class="insta-btn">
+        <a
+          class="insta-link"
+          href="https://instagram.com/delightcoffeecafe"
+          target="_blank"
+        >
+          📸 Follow Us on Instagram — @delightcoffeecafe
+        </a>
+      </div>
+    </div>
+
+    <footer>😊 Thank You For Visiting — Come Again! ❤️</footer>
+
+    <script>
+      function toggleMenu(id) {
+        document.getElementById(id).classList.toggle("show");
+      }
+
+      function rate(stars) {
+        const msg = document.getElementById("rate-msg");
+        if (stars == 5) msg.innerHTML = "😍 Thank you! You made our day!";
+        else if (stars == 4) msg.innerHTML = "😊 Glad you liked it!";
+        else if (stars == 3) msg.innerHTML = "🙂 We will improve more!";
+        else if (stars == 2) msg.innerHTML = "😕 Sorry! We'll do better!";
+        else msg.innerHTML = "😭 Sorry to disappoint you!";
+      }
+    </script>
+  </body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delight Coffee Cafe</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* GLOBAL */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+
+        background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1280&q=80")
+          center/cover fixed no-repeat;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: -1;
+      }
+
+      /* HERO */
+      .hero {
+        padding: 110px 20px 70px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 50px;
+        font-weight: 700;
+        color: #ffcc90;
+      }
+      .hero p {
+        opacity: 0.9;
+      }
+      .tagline {
+        font-size: 22px;
+        font-weight: 600;
+        color: #ffe2b6;
+      }
+
+      /* SECTIONS */
+      .section {
+        padding: 40px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .section h2 {
+        text-align: center;
+        color: #ffcc90;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      /* GRID */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      /* CARDS */
+      .card {
+        background: rgba(255, 240, 220, 0.15);
+        padding: 18px;
+        border-radius: 15px;
+        backdrop-filter: blur(8px);
+        transition: 0.3s;
+        border: 1px solid rgba(255, 230, 200, 0.2);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card h3 {
+        color: #ffe7bd;
+        margin-bottom: 6px;
+      }
+      .price {
+        opacity: 0.9;
+      }
+
+      /* RATING */
+      .rating-box {
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        border-radius: 15px;
+        max-width: 350px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+      .stars span {
+        font-size: 32px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .stars span:hover {
+        transform: scale(1.2);
+      }
+      .active {
+        color: gold;
+      }
+
+      /* FOOTER */
+      footer {
+        padding: 30px 10px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+      }
+      footer a {
+        color: #ffcc90;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    HERO
+    <section class="hero">
+      <h1>Delight Coffee Cafe</h1>
+      <p>Fresh Brews • Warm Vibes • Pure Happiness</p>
+      <div class="tagline">Sip • Relax • Repeat</div>
+    </section>
+
+    <!-- ☕ COFFEE -->
+<!-- <section class="section">
+      <h2>☕ Coffee</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Hot Coffee</h3>
+          <div class="price">29 / 39</div>
+        </div>
+        <div class="card">
+          <h3>Black Coffee</h3>
+          <div class="price">29 / 39</div>
+        </div>
+        <div class="card">
+          <h3>Hot Coffee (Chocolate)</h3>
+          <div class="price">35 / 49</div>
+        </div>
+        <div class="card">
+          <h3>Classic Cold Coffee</h3>
+          <div class="price">40 / 55 / 79</div>
+        </div>
+        <div class="card">
+          <h3>Cold Coffee (Vanilla Ice Cream)</h3>
+          <div class="price">55 / 65 / 89</div>
+        </div>
+        <div class="card">
+          <h3>Cold Coffee (Chocolate Ice Cream)</h3>
+          <div class="price">60 / 70 / 99</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Cold Coffee</h3>
+          <div class="price">110</div>
+        </div>
+        <div class="card">
+          <h3>Add-Ons</h3>
+          <div class="price">Extra Strong 10 • Chocochip 10</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🍵 TEA -->
+<!-- <section class="section">
+      <h2>🍵 Tea</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Masala Tea</h3>
+          <div class="price">19</div>
+        </div>
+        <div class="card">
+          <h3>Elaichi Tea</h3>
+          <div class="price">19</div>
+        </div>
+        <div class="card">
+          <h3>Ginger Tea</h3>
+          <div class="price">19</div>
+        </div>
+        <div class="card">
+          <h3>Lemon Tea</h3>
+          <div class="price">29</div>
+        </div>
+        <div class="card">
+          <h3>Green Tea</h3>
+          <div class="price">29</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Tea</h3>
+          <div class="price">29</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🧊 ICE TEA -->
+<!-- <section class="section">
+      <h2>🧊 Ice Tea</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Lemon Ice Tea</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Strawberry Ice Tea</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Watermelon Ice Tea</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Peach Ice Tea</h3>
+          <div class="price">69</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍹 MOCKTAIL -->
+<!-- <section class="section">
+      <h2>🍹 Mocktails</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Lemonade</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Virgin Mojito (Mint)</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Blue Lagoon</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Watermelon Mocktail</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Strawberry Mojito</h3>
+          <div class="price">49</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🥠 ROLLS -->
+<!-- <section class="section">
+      <h2>🥠 Rolls</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Spring Roll (6 Pc)</h3>
+          <div class="price">79</div>
+        </div>
+        <div class="card">
+          <h3>Cheese Roll (6 Pc)</h3>
+          <div class="price">89</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🧀 CRUNCHIES -->
+<!-- <section class="section">
+      <h2>🧀 Crunchies</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Potato Nuggets (6 Pc)</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Cheese Corn Toast</h3>
+          <div class="price">79</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🍞 GARLIC BREAD -->
+<!-- <section class="section">
+      <h2>🍞 Garlic Bread</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Stuffed Garlic Bread</h3>
+          <div class="price">99</div>
+        </div>
+        <div class="card">
+          <h3>OTC Garlic Bread</h3>
+          <div class="price">99</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🌮 DABELI -->
+<!-- <section class="section">
+      <h2>🌮 Dabeli</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Garam Dabeli</h3>
+          <div class="price">35</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Dabeli</h3>
+          <div class="price">49</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🍔 PAV ITEMS -->
+<!-- <section class="section">
+      <h2>🍔 Pav Items</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Bun Maska</h3>
+          <div class="price">25</div>
+        </div>
+        <div class="card">
+          <h3>Vada Pav</h3>
+          <div class="price">35</div>
+        </div>
+        <div class="card">
+          <h3>Butter Vada Pav</h3>
+          <div class="price">45</div>
+        </div>
+        <div class="card">
+          <h3>Peri Peri Vada Pav</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Vada Pav</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Pav Bhaji</h3>
+          <div class="price">79</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🍫 BROWNIE -->
+<!-- <section class="section">
+      <h2>🍫 Brownie</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Classic Brownie</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Choco Lava Cake</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Brownie with Ice Cream</h3>
+          <div class="price">69</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🍨 ICE CREAM -->
+<!-- <section class="section">
+      <h2>🍨 Ice Cream</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Vanilla Ice Cream</h3>
+          <div class="price">29</div>
+        </div>
+        <div class="card">
+          <h3>Chocolate Ice Cream</h3>
+          <div class="price">39</div>
+        </div>
+        <div class="card">
+          <h3>Butter Scotch Ice Cream</h3>
+          <div class="price">39</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🥤 SHAKES -->
+<!-- <section class="section">
+      <h2>🥤 Shakes</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Vanilla Shake</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Strawberry Shake</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Chocolate Shake</h3>
+          <div class="price">79</div>
+        </div>
+        <div class="card">
+          <h3>Butter Scotch Shake</h3>
+          <div class="price">79</div>
+        </div>
+        <div class="card">
+          <h3>Oreo Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Kitkat Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Paan Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Rose Gulkand Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Kesar Pista Shake</h3>
+          <div class="price">99</div>
+        </div>
+        <div class="card">
+          <h3>Black Current Shake</h3>
+          <div class="price">99</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- 🍲 SOUP -->
+<!-- <section class="section">
+      <h2>🍲 Soup</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Tomato Soup</h3>
+          <div class="price">35</div>
+        </div>
+        <div class="card">
+          <h3>Manchow Soup</h3>
+          <div class="price">39</div>
+        </div>
+        <div class="card">
+          <h3>Corn Soup</h3>
+          <div class="price">39</div>
+        </div>
+      </div>
+    </section> -->
+
+<!-- ⭐ RATING -->
+<!-- <section class="rating-box">
+      <h2 style="color: #ffcc90">Rate Your Experience ⭐</h2>
+
+      <div class="stars">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+      </div>
+
+      <p id="ratingText" style="margin-top: 10px; opacity: 0.9">Tap to rate</p>
+    </section>
+
+    <script>
+      function rate(n) {
+        let stars = document.querySelectorAll(".stars span");
+        stars.forEach((s, i) => s.classList.toggle("active", i < n));
+        document.getElementById("ratingText").innerText =
+          "You rated: " + n + "⭐";
+      }
+    </script>
+
+    <!-- FOOTER -->
+<!-- <footer>
+      <p>📞 7220000226 | 7742829653</p>
+      <p>
+        📸
+        <a href="https://instagram.com/delightcoffecafe" target="_blank"
+          >@delightcoffecafe</a
+        >
+      </p>
+      <p>© 2025 Delight Coffee Cafe – All Rights Reserved</p>
+    </footer>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delight Coffee Cafe</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* GLOBAL */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+
+        background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1280&q=80")
+          center/cover fixed no-repeat;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: -1;
+      }
+
+      /* HERO */
+      .hero {
+        padding: 110px 20px 70px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 50px;
+        font-weight: 700;
+        color: #ffcc90;
+      }
+      .hero p {
+        opacity: 0.9;
+      }
+      .tagline {
+        font-size: 22px;
+        font-weight: 600;
+        color: #ffe2b6;
+      }
+
+      /* SECTIONS */
+      .section {
+        padding: 40px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .section h2 {
+        text-align: center;
+        color: #ffcc90;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      /* GRID */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      /* CARDS */
+      .card {
+        background: rgba(255, 240, 220, 0.15);
+        padding: 18px;
+        border-radius: 15px;
+        backdrop-filter: blur(8px);
+        transition: 0.3s;
+        border: 1px solid rgba(255, 230, 200, 0.2);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card h3 {
+        color: #ffe7bd;
+        margin-bottom: 6px;
+      }
+      .price {
+        opacity: 0.9;
+      }
+
+      /* RATING */
+      .rating-box {
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        border-radius: 15px;
+        max-width: 350px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+      .stars span {
+        font-size: 32px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .stars span:hover {
+        transform: scale(1.2);
+      }
+      .active {
+        color: gold;
+      }
+
+      /* FOOTER */
+      footer {
+        padding: 30px 10px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+      }
+      footer a {
+        color: #ffcc90;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Delight Coffee Cafe</h1>
+      <p>Fresh Brews • Warm Vibes • Pure Happiness</p>
+      <div class="tagline">Sip • Relax • Repeat</div>
+    </section>
+
+    <!-- ☕ COFFEE -->
+    <section class="section">
+      <h2>☕ Coffee</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Hot Coffee</h3>
+          <div class="price">29 / 39</div>
+        </div>
+        <div class="card">
+          <h3>Black Coffee</h3>
+          <div class="price">29 / 39</div>
+        </div>
+        <div class="card">
+          <h3>Hot Coffee (Chocolate)</h3>
+          <div class="price">35 / 49</div>
+        </div>
+        <div class="card">
+          <h3>Classic Cold Coffee</h3>
+          <div class="price">40 / 55 / 79</div>
+        </div>
+        <div class="card">
+          <h3>Cold Coffee (Vanilla Ice Cream)</h3>
+          <div class="price">55 / 65 / 89</div>
+        </div>
+        <div class="card">
+          <h3>Cold Coffee (Chocolate Ice Cream)</h3>
+          <div class="price">60 / 70 / 99</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Cold Coffee</h3>
+          <div class="price">110</div>
+        </div>
+        <div class="card">
+          <h3>Add-Ons</h3>
+          <div class="price">Extra Strong 10 • Chocochip 10</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍵 TEA -->
+    <section class="section">
+      <h2>🍵 Tea</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Masala Tea</h3>
+          <div class="price">19</div>
+        </div>
+        <div class="card">
+          <h3>Elaichi Tea</h3>
+          <div class="price">19</div>
+        </div>
+        <div class="card">
+          <h3>Ginger Tea</h3>
+          <div class="price">19</div>
+        </div>
+        <div class="card">
+          <h3>Lemon Tea</h3>
+          <div class="price">29</div>
+        </div>
+        <div class="card">
+          <h3>Green Tea</h3>
+          <div class="price">29</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Tea</h3>
+          <div class="price">29</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧊 ICE TEA -->
+    <section class="section">
+      <h2>🧊 Ice Tea</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Lemon Ice Tea</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Strawberry Ice Tea</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Watermelon Ice Tea</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Peach Ice Tea</h3>
+          <div class="price">69</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍹 MOCKTAIL -->
+    <section class="section">
+      <h2>🍹 Mocktails</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Lemonade</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Virgin Mojito (Mint)</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Blue Lagoon</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Watermelon Mocktail</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Strawberry Mojito</h3>
+          <div class="price">49</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🥠 ROLLS -->
+    <section class="section">
+      <h2>🥠 Rolls</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Spring Roll (6 Pc)</h3>
+          <div class="price">79</div>
+        </div>
+        <div class="card">
+          <h3>Cheese Roll (6 Pc)</h3>
+          <div class="price">89</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧀 CRUNCHIES -->
+    <section class="section">
+      <h2>🧀 Crunchies</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Potato Nuggets (6 Pc)</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Cheese Corn Toast</h3>
+          <div class="price">79</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍞 GARLIC BREAD -->
+    <section class="section">
+      <h2>🍞 Garlic Bread</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Stuffed Garlic Bread</h3>
+          <div class="price">99</div>
+        </div>
+        <div class="card">
+          <h3>OTC Garlic Bread</h3>
+          <div class="price">99</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌮 DABELI -->
+    <section class="section">
+      <h2>🌮 Dabeli</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Garam Dabeli</h3>
+          <div class="price">35</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Dabeli</h3>
+          <div class="price">49</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍔 PAV ITEMS -->
+    <section class="section">
+      <h2>🍔 Pav Items</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Bun Maska</h3>
+          <div class="price">25</div>
+        </div>
+        <div class="card">
+          <h3>Vada Pav</h3>
+          <div class="price">35</div>
+        </div>
+        <div class="card">
+          <h3>Butter Vada Pav</h3>
+          <div class="price">45</div>
+        </div>
+        <div class="card">
+          <h3>Peri Peri Vada Pav</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>DCC Special Vada Pav</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Pav Bhaji</h3>
+          <div class="price">79</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍫 BROWNIE -->
+    <section class="section">
+      <h2>🍫 Brownie</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Classic Brownie</h3>
+          <div class="price">49</div>
+        </div>
+        <div class="card">
+          <h3>Choco Lava Cake</h3>
+          <div class="price">59</div>
+        </div>
+        <div class="card">
+          <h3>Brownie with Ice Cream</h3>
+          <div class="price">69</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍨 ICE CREAM -->
+    <section class="section">
+      <h2>🍨 Ice Cream</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Vanilla Ice Cream</h3>
+          <div class="price">29</div>
+        </div>
+        <div class="card">
+          <h3>Chocolate Ice Cream</h3>
+          <div class="price">39</div>
+        </div>
+        <div class="card">
+          <h3>Butter Scotch Ice Cream</h3>
+          <div class="price">39</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🥤 SHAKES -->
+    <section class="section">
+      <h2>🥤 Shakes</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Vanilla Shake</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Strawberry Shake</h3>
+          <div class="price">69</div>
+        </div>
+        <div class="card">
+          <h3>Chocolate Shake</h3>
+          <div class="price">79</div>
+        </div>
+        <div class="card">
+          <h3>Butter Scotch Shake</h3>
+          <div class="price">79</div>
+        </div>
+        <div class="card">
+          <h3>Oreo Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Kitkat Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Paan Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Rose Gulkand Shake</h3>
+          <div class="price">89</div>
+        </div>
+        <div class="card">
+          <h3>Kesar Pista Shake</h3>
+          <div class="price">99</div>
+        </div>
+        <div class="card">
+          <h3>Black Current Shake</h3>
+          <div class="price">99</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍲 SOUP -->
+    <section class="section">
+      <h2>🍲 Soup</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Tomato Soup</h3>
+          <div class="price">35</div>
+        </div>
+        <div class="card">
+          <h3>Manchow Soup</h3>
+          <div class="price">39</div>
+        </div>
+        <div class="card">
+          <h3>Corn Soup</h3>
+          <div class="price">39</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⭐ RATING -->
+    <section class="rating-box">
+      <h2 style="color: #ffcc90">Rate Your Experience ⭐</h2>
+
+      <div class="stars">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+      </div>
+
+      <p id="ratingText" style="margin-top: 10px; opacity: 0.9">Tap to rate</p>
+    </section>
+
+    <script>
+      function rate(n) {
+        let stars = document.querySelectorAll(".stars span");
+        stars.forEach((s, i) => s.classList.toggle("active", i < n));
+        document.getElementById("ratingText").innerText =
+          "You rated: " + n + "⭐";
+      }
+    </script>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>📞 7220000226 | 7742829653</p>
+      <p>
+        📸
+        <a href="https://instagram.com/delightcoffecafe" target="_blank"
+          >@delightcoffecafe</a
+        >
+      </p>
+      <p>© 2025 Delight Coffee Cafe – All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
